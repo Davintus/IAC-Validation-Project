@@ -33,7 +33,7 @@ jobs:
         run: |
           curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
           tflint --init
-          tflint --module --enable-rule=terraform_documented_variables
+          tflint --call-module-type=all --enable-rule=terraform_documented_variables
 
       # Security Compliance (Checkov)
       - name: Run Checkov
